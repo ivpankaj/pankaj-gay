@@ -1,8 +1,9 @@
 import type { Metadata, Viewport } from "next";
+import { siteConfig } from "@/config/site";
 import "./globals.css";
 
 export const viewport: Viewport = {
-  themeColor: "#000000",
+  themeColor: siteConfig.themeColor,
   colorScheme: "dark",
   width: "device-width",
   initialScale: 1,
@@ -10,51 +11,53 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://pankaj.gay"),
-  title: "Pankaj Verma (ivpankaj) | Official Social Media & Links",
-  description:
-    "Official single-page social media hub and portfolio for Pankaj Verma (@ivpankaj). Connect across GitHub, X, Instagram, LinkedIn, Discord, and more.",
-  keywords: [
-    "Pankaj Verma",
-    "ivpankaj",
-    "pankaj.gay",
-    "Pankaj Verma links",
-    "Pankaj Verma social media",
-    "ivpankaj portfolio",
-    "ivpankaj social",
-    "ivpankaj github",
-    "ivpankaj twitter",
-    "ivpankaj instagram",
-    "ivpankaj linkedin",
-    "ivpankaj online",
-    "developer portfolio",
-  ],
-  authors: [{ name: "Pankaj Verma", url: "https://pankaj.gay" }],
-  creator: "Pankaj Verma (ivpankaj)",
-  publisher: "Pankaj Verma",
+  metadataBase: new URL(siteConfig.url),
+  title: {
+    default: `${siteConfig.name} | Official Website & Social Links`,
+    template: `%s | ${siteConfig.name}`,
+  },
+  description: siteConfig.description,
+  applicationName: siteConfig.name,
+  authors: [{ name: siteConfig.name, url: siteConfig.url }],
+  creator: `${siteConfig.name} (${siteConfig.alternateName})`,
+  publisher: siteConfig.name,
   formatDetection: {
     email: false,
     address: false,
     telephone: false,
   },
+  keywords: [
+    "Pankaj Verma",
+    "ivpankaj",
+    "pankaj.gay",
+    "Pankaj Verma official website",
+    "Pankaj Verma social media",
+    "Pankaj Verma links",
+    "ivpankaj online",
+    "ivpankaj github",
+    "ivpankaj twitter",
+    "ivpankaj instagram",
+    "ivpankaj linkedin",
+    "ivpankaj developer",
+    "software developer",
+  ],
   alternates: {
-    canonical: "https://pankaj.gay",
+    canonical: "/",
   },
   openGraph: {
     type: "profile",
-    title: "Pankaj Verma (ivpankaj) | Official Links",
-    description:
-      "Explore official links, channels, and social media hubs for Pankaj Verma (ivpankaj).",
-    url: "https://pankaj.gay",
-    siteName: "pankaj.gay",
-    locale: "en_US",
+    locale: siteConfig.locale,
+    url: siteConfig.url,
+    title: `${siteConfig.name} | Official Website & Social Links`,
+    description: siteConfig.description,
+    siteName: siteConfig.name,
   },
   twitter: {
-    card: "summary",
-    title: "Pankaj Verma (ivpankaj) | Official Links",
-    description:
-      "Explore official links and social media hubs for Pankaj Verma (@ivpankaj).",
+    card: "summary_large_image",
+    title: `${siteConfig.name} | Official Website & Social Links`,
+    description: siteConfig.description,
     creator: "@ivpankaj",
+    site: "@ivpankaj",
   },
   robots: {
     index: true,
@@ -67,6 +70,14 @@ export const metadata: Metadata = {
       "max-snippet": -1,
     },
   },
+  verification: {
+    google: siteConfig.verification.google || undefined,
+    other: {
+      ...(siteConfig.verification.bing
+        ? { "msvalidate.01": siteConfig.verification.bing }
+        : {}),
+    },
+  },
 };
 
 export default function RootLayout({
@@ -77,6 +88,22 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+        {/* Google tag (gtag.js) */}
+        <script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=G-61YH1S6XCW"
+        />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-61YH1S6XCW');
+`,
+          }}
+        />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link
           rel="preconnect"

@@ -9,22 +9,78 @@ export default function Home() {
       {
         "@type": "Person",
         "@id": `${siteConfig.url}/#person`,
-        "name": siteConfig.name,
-        "alternateName": siteConfig.alternateName,
+        "name": "Pankaj Verma",
+        "additionalName": "ivpankaj",
+        "alternateName": [
+          "Pankaj",
+          "Pankaj Verma",
+          "ivpankaj",
+          "@ivpankaj",
+          "Pankaj Verma ivpankaj",
+          "ivpankaj.dev",
+          "ivpankaj online",
+          "ivpankaj developer",
+        ],
+        "identifier": "ivpankaj",
         "url": `${siteConfig.url}/`,
         "image": `${siteConfig.url}/opengraph-image`,
-        "description": siteConfig.description,
-        "jobTitle": "Software Developer & Creator",
+        "description":
+          "Pankaj Verma (ivpankaj) is a software developer and tech person based in Noida, Greater Noida, and Delhi NCR, India.",
+        "jobTitle": "Software Developer",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Noida",
+          "addressRegion": "Uttar Pradesh",
+          "addressCountry": "IN",
+        },
+        "homeLocation": [
+          { "@type": "Place", "name": "Noida, Uttar Pradesh, India" },
+          { "@type": "Place", "name": "Greater Noida, Uttar Pradesh, India" },
+          { "@type": "Place", "name": "Delhi, India" },
+          { "@type": "Place", "name": "Delhi NCR, India" },
+        ],
+        "workLocation": [
+          { "@type": "Place", "name": "Noida" },
+          { "@type": "Place", "name": "Greater Noida" },
+          { "@type": "Place", "name": "Delhi NCR" },
+        ],
+        "hasOccupation": {
+          "@type": "Occupation",
+          "name": "Software Developer",
+          "occupationalCategory": "Software and Tech",
+          "description":
+            "Software developer and tech professional based in Noida, Greater Noida, and Delhi NCR.",
+          "skills":
+            "Full-Stack Web Development, TypeScript, React, Next.js, Node.js, Software Engineering",
+        },
         "sameAs": siteConfig.verifiedSameAs,
+        "knowsAbout": [
+          "Software Development",
+          "Software Engineering",
+          "Tech and Software",
+          "Full-Stack Web Development",
+          "TypeScript",
+          "React",
+          "Next.js",
+          "Open Source",
+        ],
         "mainEntityOfPage": `${siteConfig.url}/`,
       },
       {
         "@type": "WebSite",
         "@id": `${siteConfig.url}/#website`,
         "url": `${siteConfig.url}/`,
-        "name": siteConfig.name,
-        "alternateName": siteConfig.alternateName,
-        "description": siteConfig.description,
+        "name": "Pankaj Verma (ivpankaj)",
+        "alternateName": [
+          "Pankaj",
+          "Pankaj Verma",
+          "ivpankaj",
+          "Pankaj Verma — Official Website",
+          "ivpankaj — Official Website",
+          "pankaj.gay",
+        ],
+        "description":
+          "The official website and digital hub of Pankaj Verma (ivpankaj), software developer and tech person in Noida, Greater Noida, and Delhi NCR.",
         "publisher": {
           "@id": `${siteConfig.url}/#person`,
         },
@@ -37,7 +93,8 @@ export default function Home() {
         "@type": "ProfilePage",
         "@id": `${siteConfig.url}/#profilepage`,
         "url": `${siteConfig.url}/`,
-        "name": `${siteConfig.name} - Official Personal Website & Profile`,
+        "name": "Pankaj Verma (ivpankaj) — Software Developer in Noida & Delhi NCR",
+        "headline": "Official Profile & Social Directory for Pankaj Verma (ivpankaj)",
         "isPartOf": {
           "@id": `${siteConfig.url}/#website`,
         },
@@ -46,6 +103,33 @@ export default function Home() {
         },
         "description": siteConfig.description,
         "inLanguage": "en-US",
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": `${siteConfig.url}/#breadcrumb`,
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Pankaj Verma (ivpankaj)",
+            "item": `${siteConfig.url}/`,
+          },
+        ],
+      },
+      {
+        "@type": "ItemList",
+        "@id": `${siteConfig.url}/#social-directory`,
+        "name": "Pankaj Verma (ivpankaj) Official Social Media & Developer Profiles",
+        "description":
+          "Verified directory of official accounts for Pankaj Verma (ivpankaj) across social networks and developer platforms.",
+        "itemListElement": Object.entries(siteConfig.socials).map(
+          ([, social], index) => ({
+            "@type": "ListItem",
+            "position": index + 1,
+            "name": `Pankaj Verma (ivpankaj) on ${social.name} (${social.handle})`,
+            "url": social.url,
+          })
+        ),
       },
     ],
   };
@@ -58,19 +142,40 @@ export default function Home() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
       />
 
-      {/* Crawlable Semantic SEO Foundation for Googlebot and Screen Readers (Visually Hidden) */}
+      {/* Crawlable Semantic SEO Foundation for Googlebot and Search Indexing (Visually Hidden) */}
       <header className="sr-only">
-        <h1>Pankaj Verma — Official Personal Website & Social Media Hub</h1>
+        <h1>Pankaj Verma (ivpankaj) — Software Developer in Noida, Greater Noida & Delhi NCR</h1>
         <p>
-          Welcome to the official personal website of Pankaj Verma, known across the internet
-          as ivpankaj. This website is the verified central directory connecting all of his
-          genuine social media channels, open-source projects, and professional platforms.
+          Welcome to the official personal website of <strong>Pankaj Verma</strong>, known online as
+          <strong>ivpankaj</strong> or <strong>Pankaj</strong>. Pankaj Verma is an accomplished
+          <strong>software developer</strong> and <strong>software and tech person</strong> based in
+          <strong>Noida</strong>, <strong>Greater Noida</strong>, <strong>Delhi</strong>, and the
+          <strong>Delhi NCR</strong> region.
         </p>
+        <section>
+          <h2>About Pankaj Verma (ivpankaj) — Software Developer & Tech Person</h2>
+          <p>
+            Looking for <strong>Pankaj</strong>, <strong>Pankaj Verma</strong>, <strong>ivpankaj</strong>,
+            or a skilled <strong>Software Developer at Noida / Greater Noida / Delhi / Delhi NCR</strong>?
+            Pankaj Verma is a dedicated software engineer specializing in modern web technologies,
+            cloud architecture, and open-source software. This website (pankaj.gay) serves as his
+            verified primary hub, linking to his GitHub, LinkedIn, X (Twitter), Instagram, and
+            developer portfolio.
+          </p>
+          <ul>
+            <li><strong>Full Name:</strong> Pankaj Verma (Pankaj)</li>
+            <li><strong>Online Moniker:</strong> ivpankaj (@ivpankaj)</li>
+            <li><strong>Role:</strong> Software Developer, Software and Tech Person</li>
+            <li><strong>Location:</strong> Noida, Greater Noida, Delhi, Delhi NCR, India</li>
+            <li><strong>Official Domain:</strong> https://pankaj.gay</li>
+            <li><strong>Developer Portfolio:</strong> https://ivpankaj.online</li>
+          </ul>
+        </section>
       </header>
 
-      {/* Crawlable Semantic Anchor Links with rel="me" for Search Engine Verification (Visually Hidden) */}
-      <nav aria-label="Official Social Profiles Directory" className="sr-only">
-        <h2>Official Verified Social Media Channels for Pankaj Verma</h2>
+      {/* Crawlable Semantic Anchor Links with rel="me" for Bi-Directional Identity Verification (Visually Hidden) */}
+      <nav aria-label="Official Social Profiles Directory for Pankaj Verma (ivpankaj)" className="sr-only">
+        <h2>Official Verified Social Media & Developer Channels for Pankaj Verma (ivpankaj)</h2>
         <ul>
           {Object.entries(siteConfig.socials).map(([key, social]) => (
             <li key={key}>
@@ -79,7 +184,7 @@ export default function Home() {
                 rel="me noopener noreferrer"
                 target="_blank"
               >
-                Pankaj Verma on {social.name} ({social.handle})
+                Pankaj Verma (ivpankaj) on {social.name} ({social.handle})
               </a>
             </li>
           ))}

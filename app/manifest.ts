@@ -3,8 +3,8 @@ import { siteConfig } from "@/config/site";
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: siteConfig.name,
-    short_name: siteConfig.alternateName,
+    name: "Pankaj Verma (ivpankaj) — Software Developer",
+    short_name: "Pankaj Verma",
     description: siteConfig.description,
     start_url: "/",
     display: "standalone",

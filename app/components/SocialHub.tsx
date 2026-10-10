@@ -33,9 +33,12 @@ import {
   ChessIcon,
   RedditIcon,
   SpotifyIcon,
-  WhatsAppIcon,
   WebsiteIcon,
   OnlyFansIcon,
+  LeetCodeIcon,
+  FacebookIcon,
+  SnapchatIcon,
+  GmailIcon,
 } from "./Icons";
 import { ShareModal } from "./ShareModal";
 import { SearchModal } from "./SearchModal";
@@ -74,14 +77,19 @@ const ALL_SLIDES: SocialMediaSlide[] = [
     brandIcon: <InstagramIcon size={38} />,
     profiles: [
       {
+        handle: "@vpnkz",
+        url: "https://instagram.com/vpnkz",
+        ariaLabel: "Instagram @vpnkz",
+      },
+      {
         handle: "@ivpankaj",
         url: "https://instagram.com/ivpankaj",
         ariaLabel: "Instagram @ivpankaj",
       },
       {
-        handle: "@ivpankaj.dev",
-        url: "https://instagram.com/ivpankaj",
-        ariaLabel: "Instagram @ivpankaj.dev",
+        handle: "@15.10p",
+        url: "https://instagram.com/15.10p",
+        ariaLabel: "Instagram @15.10p",
       },
     ],
   },
@@ -142,8 +150,22 @@ const ALL_SLIDES: SocialMediaSlide[] = [
     ],
   },
   {
-    id: "discord",
+    id: "leetcode",
     index: "06",
+    name: "LEETCODE",
+    brandColor: "#FFA116",
+    brandIcon: <LeetCodeIcon size={38} className="text-[#FFA116]" />,
+    profiles: [
+      {
+        handle: "ivpankaj",
+        url: "https://leetcode.com/u/ivpankaj",
+        ariaLabel: "LeetCode ivpankaj",
+      },
+    ],
+  },
+  {
+    id: "discord",
+    index: "07",
     name: "DISCORD",
     brandColor: "#5865F2",
     brandIcon: <DiscordIcon size={38} className="text-[#5865F2]" />,
@@ -157,7 +179,7 @@ const ALL_SLIDES: SocialMediaSlide[] = [
   },
   {
     id: "telegram",
-    index: "07",
+    index: "08",
     name: "TELEGRAM",
     brandColor: "#24A1DE",
     brandIcon: <TelegramIcon size={38} className="text-[#24A1DE]" />,
@@ -170,8 +192,36 @@ const ALL_SLIDES: SocialMediaSlide[] = [
     ],
   },
   {
+    id: "snapchat",
+    index: "09",
+    name: "SNAPCHAT",
+    brandColor: "#FFFC00",
+    brandIcon: <SnapchatIcon size={38} className="text-[#FFFC00]" />,
+    profiles: [
+      {
+        handle: "ivpank",
+        url: "https://snapchat.com/add/ivpank",
+        ariaLabel: "Snapchat ivpank",
+      },
+    ],
+  },
+  {
+    id: "facebook",
+    index: "10",
+    name: "FACEBOOK",
+    brandColor: "#1877F2",
+    brandIcon: <FacebookIcon size={38} className="text-[#1877F2]" />,
+    profiles: [
+      {
+        handle: "ivpankaj",
+        url: "https://facebook.com/ivpankaj",
+        ariaLabel: "Facebook ivpankaj",
+      },
+    ],
+  },
+  {
     id: "threads",
-    index: "08",
+    index: "11",
     name: "THREADS",
     brandColor: "#ffffff",
     brandIcon: <ThreadsIcon size={34} className="text-white" />,
@@ -185,7 +235,7 @@ const ALL_SLIDES: SocialMediaSlide[] = [
   },
   {
     id: "spotify",
-    index: "09",
+    index: "12",
     name: "SPOTIFY",
     brandColor: "#1DB954",
     brandIcon: <SpotifyIcon size={38} className="text-[#1DB954]" />,
@@ -199,7 +249,7 @@ const ALL_SLIDES: SocialMediaSlide[] = [
   },
   {
     id: "chess",
-    index: "10",
+    index: "13",
     name: "CHESS.COM",
     brandColor: "#81B64C",
     brandIcon: <ChessIcon size={38} className="text-[#81B64C]" />,
@@ -213,7 +263,7 @@ const ALL_SLIDES: SocialMediaSlide[] = [
   },
   {
     id: "reddit",
-    index: "11",
+    index: "14",
     name: "REDDIT",
     brandColor: "#FF4500",
     brandIcon: <RedditIcon size={38} className="text-[#FF4500]" />,
@@ -226,37 +276,22 @@ const ALL_SLIDES: SocialMediaSlide[] = [
     ],
   },
   {
-    id: "whatsapp",
-    index: "12",
-    name: "WHATSAPP",
-    brandColor: "#25D366",
-    brandIcon: <WhatsAppIcon size={38} className="text-[#25D366]" />,
+    id: "gmail",
+    index: "15",
+    name: "GMAIL",
+    brandColor: "#EA4335",
+    brandIcon: <GmailIcon size={38} className="text-[#EA4335]" />,
     profiles: [
       {
-        handle: "Pankaj Verma",
-        url: "https://wa.me/?text=https%3A%2F%2Fpankaj.gay",
-        ariaLabel: "WhatsApp Pankaj Verma",
-      },
-    ],
-  },
-  {
-    id: "onlyfans",
-    index: "13",
-    name: "ONLYFANS",
-    brandColor: "#00AFF0",
-    brandIcon: <OnlyFansIcon size={38} className="text-[#00AFF0]" />,
-    profiles: [
-      {
-        handle: "i will coming soon",
-        url: "#",
-        ariaLabel: "OnlyFans - i will coming soon",
-        isComingSoon: true,
+        handle: "imvpankaj@gmail.com",
+        url: "mailto:imvpankaj@gmail.com",
+        ariaLabel: "Email imvpankaj@gmail.com",
       },
     ],
   },
   {
     id: "portfolio",
-    index: "14",
+    index: "16",
     name: "PORTFOLIO",
     brandColor: "#00F0FF",
     brandIcon: <WebsiteIcon size={38} className="text-[#00F0FF]" />,
@@ -268,7 +303,44 @@ const ALL_SLIDES: SocialMediaSlide[] = [
       },
     ],
   },
+  {
+    id: "onlyfans",
+    index: "17",
+    name: "ONLYFANS",
+    brandColor: "#00AFF0",
+    brandIcon: <OnlyFansIcon size={38} className="text-[#00AFF0]" />,
+    profiles: [
+      {
+        handle: "Coming soon",
+        url: "#",
+        ariaLabel: "OnlyFans - Coming soon",
+        isComingSoon: true,
+      },
+    ],
+  },
 ];
+
+const getHeadingSize = (text: string) => {
+  const len = text.length;
+  if (len <= 2) {
+    // e.g. "X"
+    return "text-[clamp(3.5rem,14vw,8.5rem)] sm:text-[clamp(5rem,16vw,10.5rem)]";
+  }
+  if (len <= 6) {
+    // e.g. "GITHUB", "REDDIT"
+    return "text-[clamp(2.25rem,9vw,5.75rem)] sm:text-[clamp(3.25rem,10vw,7.25rem)]";
+  }
+  if (len <= 7) {
+    // e.g. "WELCOME", "YOUTUBE", "DISCORD", "THREADS", "SPOTIFY"
+    return "text-[clamp(2rem,7.5vw,5.25rem)] sm:text-[clamp(2.75rem,8.5vw,6.5rem)]";
+  }
+  if (len <= 8) {
+    // e.g. "LINKEDIN", "TELEGRAM", "WHATSAPP", "ONLYFANS"
+    return "text-[clamp(1.75rem,6.2vw,4.5rem)] sm:text-[clamp(2.25rem,7.2vw,5.5rem)]";
+  }
+  // 9+ letters: "INSTAGRAM", "CHESS.COM", "PORTFOLIO"
+  return "text-[clamp(1.5rem,5.2vw,4rem)] sm:text-[clamp(2rem,6.2vw,5rem)]";
+};
 
 export function SocialHub() {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -327,9 +399,7 @@ export function SocialHub() {
         <header className="fixed top-0 inset-x-0 z-50 flex items-center justify-between px-4 sm:px-10 py-3.5 sm:py-5 bg-gradient-to-b from-black/90 to-transparent backdrop-blur-sm pointer-events-auto">
           <div className="flex items-center gap-2">
             <span className="h-1.5 w-1.5 rounded-full bg-white animate-pulse" />
-            <span className="text-[11px] sm:text-xs uppercase tracking-[0.25em] text-zinc-400 font-semibold font-sans">
-              ivpankaj
-            </span>
+      
           </div>
 
           <div className="flex items-center gap-2">
@@ -401,11 +471,10 @@ export function SocialHub() {
                 aria-label={`Jump to ${slide.name}`}
               >
                 <div
-                  className={`transition-all duration-300 rounded-full ${
-                    isActive
+                  className={`transition-all duration-300 rounded-full ${isActive
                       ? "h-4 w-1 bg-white shadow-[0_0_6px_rgba(255,255,255,0.7)]"
                       : "h-1 w-1 bg-zinc-700 hover:bg-zinc-400"
-                  }`}
+                    }`}
                 />
               </button>
             );
@@ -464,16 +533,20 @@ export function SocialHub() {
                   key={slide.id}
                   className="w-full h-screen snap-start snap-always flex flex-col justify-center items-center relative px-4 sm:px-8 md:px-12 pt-14 pb-14 overflow-hidden"
                 >
-                  <div className="w-full max-w-4xl flex flex-col items-center text-center my-auto">
-                    <div className="w-full max-w-full overflow-hidden px-2">
-                      <motion.h1
+                  <div className="w-full max-w-6xl 2xl:max-w-7xl flex flex-col items-center text-center my-auto px-2 sm:px-4">
+                    <div className="w-full max-w-full flex justify-center items-center px-2">
+                      <motion.div
+                        role="heading"
+                        aria-level={2}
                         initial={{ opacity: 0, scale: 0.9, y: 20 }}
                         animate={isCurrent ? { opacity: 1, scale: 1, y: 0 } : { opacity: 0, scale: 0.9, y: 20 }}
                         transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
-                        className="font-display font-black tracking-tight uppercase text-white leading-none select-none text-[clamp(1.75rem,8vw,8.5rem)] text-center"
+                        className={`font-display font-black tracking-tight uppercase text-white leading-none select-none text-center whitespace-nowrap ${getHeadingSize(
+                          "WELCOME"
+                        )}`}
                       >
                         WELCOME
-                      </motion.h1>
+                      </motion.div>
                     </div>
 
                     <motion.div
@@ -501,7 +574,7 @@ export function SocialHub() {
                   {slide.index}
                 </span>
 
-                <div className="w-full max-w-4xl flex flex-col items-center text-center my-auto">
+                <div className="w-full max-w-6xl 2xl:max-w-7xl flex flex-col items-center text-center my-auto px-2 sm:px-4">
                   {/* Real Logo Box with Real Color */}
                   <motion.div
                     initial={{ opacity: 0, scale: 0.85, y: 15 }}
@@ -511,8 +584,8 @@ export function SocialHub() {
                     style={
                       slide.brandColor
                         ? {
-                            boxShadow: `0 8px 32px -4px ${slide.brandColor}22`,
-                          }
+                          boxShadow: `0 8px 32px -4px ${slide.brandColor}22`,
+                        }
                         : undefined
                     }
                   >
@@ -520,7 +593,7 @@ export function SocialHub() {
                   </motion.div>
 
                   {/* GIANT RESPONSIVE TITLE */}
-                  <div className="w-full max-w-full overflow-hidden px-1 mb-4 sm:mb-8">
+                  <div className="w-full max-w-full flex justify-center items-center px-1 mb-4 sm:mb-8">
                     <motion.h2
                       initial={{ opacity: 0, scale: 0.94, y: 20 }}
                       animate={
@@ -529,7 +602,9 @@ export function SocialHub() {
                           : { opacity: 0, scale: 0.94, y: 20 }
                       }
                       transition={{ duration: 0.55, ease: [0.16, 1, 0.3, 1] }}
-                      className="font-display font-black tracking-tight uppercase text-white leading-none select-none text-[clamp(2.1rem,8vw,7.5rem)] break-normal max-w-full"
+                      className={`font-display font-black tracking-tight uppercase text-white leading-none select-none text-center whitespace-nowrap ${getHeadingSize(
+                        slide.name
+                      )}`}
                     >
                       {slide.name}
                     </motion.h2>
@@ -545,17 +620,18 @@ export function SocialHub() {
                     className={`w-full max-w-full ${
                       isSingle
                         ? "flex justify-center"
+                        : slide.profiles.length === 3
+                        ? "flex flex-col sm:grid sm:grid-cols-3 gap-2.5 sm:gap-3.5 max-w-md sm:max-w-3xl mx-auto"
                         : "flex flex-col sm:grid sm:grid-cols-2 gap-2.5 sm:gap-3.5 max-w-md sm:max-w-xl mx-auto"
                     }`}
                   >
                     {slide.profiles.map((profile, pIdx) => (
                       <div
                         key={pIdx}
-                        className={`group flex items-center justify-between px-4 py-3 sm:px-5 sm:py-3.5 rounded-xl sm:rounded-2xl bg-zinc-950/90 border border-zinc-800/90 hover:border-zinc-600 hover:bg-zinc-900/40 transition-all duration-300 shadow-xl ${
-                          isSingle
+                        className={`group flex items-center justify-between px-4 py-3 sm:px-5 sm:py-3.5 rounded-xl sm:rounded-2xl bg-zinc-950/90 border border-zinc-800/90 hover:border-zinc-600 hover:bg-zinc-900/40 transition-all duration-300 shadow-xl ${isSingle
                             ? "w-full max-w-[310px] sm:max-w-sm mx-auto"
                             : "w-full max-w-[310px] sm:max-w-none mx-auto"
-                        }`}
+                          }`}
                       >
                         <div className="flex items-center min-w-0 pr-2">
                           <span className="font-semibold text-white text-sm sm:text-base tracking-tight truncate font-sans">
@@ -573,7 +649,7 @@ export function SocialHub() {
                                 onClick={() =>
                                   handleCopy(
                                     profile.isComingSoon
-                                      ? "i will coming soon"
+                                      ? "Coming soon"
                                       : profile.url
                                   )
                                 }
@@ -581,9 +657,9 @@ export function SocialHub() {
                                 aria-label="Copy"
                               >
                                 {copiedUrl ===
-                                (profile.isComingSoon
-                                  ? "i will coming soon"
-                                  : profile.url) ? (
+                                  (profile.isComingSoon
+                                    ? "Coming soon"
+                                    : profile.url) ? (
                                   <Check className="h-3.5 w-3.5 sm:h-4 sm:w-4 text-white" />
                                 ) : (
                                   <Copy className="h-3.5 w-3.5 sm:h-4 sm:w-4" />
@@ -595,9 +671,9 @@ export function SocialHub() {
                               className="bg-zinc-900 border-zinc-800 text-white text-xs"
                             >
                               {copiedUrl ===
-                              (profile.isComingSoon
-                                ? "i will coming soon"
-                                : profile.url)
+                                (profile.isComingSoon
+                                  ? "Coming soon"
+                                  : profile.url)
                                 ? "Copied"
                                 : "Copy"}
                             </TooltipContent>
@@ -609,11 +685,10 @@ export function SocialHub() {
                                 variant="secondary"
                                 size="icon"
                                 asChild={!profile.isComingSoon}
-                                className={`h-8 w-8 sm:h-9 sm:w-9 rounded-xl transition-all ${
-                                  profile.isComingSoon
+                                className={`h-8 w-8 sm:h-9 sm:w-9 rounded-xl transition-all ${profile.isComingSoon
                                     ? "bg-zinc-900 text-zinc-400 border border-zinc-800 cursor-default"
                                     : "bg-white text-black hover:bg-zinc-200 group-hover:scale-105 cursor-pointer"
-                                }`}
+                                  }`}
                               >
                                 {profile.isComingSoon ? (
                                   <div>

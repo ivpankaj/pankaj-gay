@@ -68,14 +68,14 @@ export default function OpenGraphImage() {
               fontWeight: 600,
             }}
           >
-            {siteConfig.alternateName}
+            {siteConfig.alternateName} • NOIDA / DELHI NCR
           </span>
         </div>
 
         {/* Main Name */}
         <div
           style={{
-            fontSize: "84px",
+            fontSize: "86px",
             fontWeight: 900,
             letterSpacing: "-0.04em",
             textAlign: "center",
@@ -93,12 +93,12 @@ export default function OpenGraphImage() {
             fontSize: "24px",
             color: "#a1a1aa",
             textAlign: "center",
-            maxWidth: "760px",
+            maxWidth: "800px",
             lineHeight: 1.4,
             marginBottom: "36px",
           }}
         >
-          Official Personal Website & Central Social Media Directory
+          Software Developer & Tech Person • Noida / Greater Noida / Delhi NCR
         </div>
 
         {/* Bottom domain tag */}

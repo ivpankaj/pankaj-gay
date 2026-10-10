@@ -533,7 +533,7 @@ export function SocialHub() {
                   key={slide.id}
                   className="w-full h-screen snap-start snap-always flex flex-col justify-center items-center relative px-4 sm:px-8 md:px-12 pt-14 pb-14 overflow-hidden"
                 >
-                  <div className="w-full max-w-6xl 2xl:max-w-7xl flex flex-col items-center text-center my-auto px-2 sm:px-4">
+                  <div className="w-full max-w-6xl 2xl:max-w-7xl flex flex-col items-center text-center my-auto -translate-y-12 sm:translate-y-0 px-2 sm:px-4">
                     <div className="w-full max-w-full flex justify-center items-center px-2">
                       <motion.div
                         role="heading"
@@ -574,7 +574,7 @@ export function SocialHub() {
                   {slide.index}
                 </span>
 
-                <div className="w-full max-w-6xl 2xl:max-w-7xl flex flex-col items-center text-center my-auto px-2 sm:px-4">
+                <div className="w-full max-w-6xl 2xl:max-w-7xl flex flex-col items-center text-center my-auto -translate-y-20 sm:translate-y-0 px-2 sm:px-4">
                   {/* Real Logo Box with Real Color */}
                   <motion.div
                     initial={{ opacity: 0, scale: 0.85, y: 15 }}

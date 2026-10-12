@@ -168,7 +168,7 @@ export default function Home() {
             <li><strong>Role:</strong> Software Developer, Software and Tech Person</li>
             <li><strong>Location:</strong> Noida, Greater Noida, Delhi, Delhi NCR, India</li>
             <li><strong>Official Domain:</strong> https://pankaj.gay</li>
-            <li><strong>Developer Portfolio:</strong> https://ivpankaj.online</li>
+            <li><strong>Developer Portfolio:</strong> https://pankaj.life</li>
           </ul>
         </section>
       </header>

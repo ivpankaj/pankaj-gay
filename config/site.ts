@@ -113,8 +113,8 @@ export const siteConfig: SiteConfig = {
     },
     portfolio: {
       name: "Developer Portfolio",
-      url: "https://ivpankaj.online",
-      handle: "ivpankaj.online",
+      url: "https://pankaj.life",
+      handle: "pankaj.life",
       category: "portfolio",
       verified: true,
     },
@@ -162,7 +162,7 @@ export const siteConfig: SiteConfig = {
     "https://leetcode.com/u/ivpankaj",
     "https://facebook.com/ivpankaj",
     "https://snapchat.com/add/ivpank",
-    "https://ivpankaj.online",
+    "https://pankaj.life",
   ],
   verification: {
     google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION || "",

@@ -297,9 +297,9 @@ const ALL_SLIDES: SocialMediaSlide[] = [
     brandIcon: <WebsiteIcon size={38} className="text-[#00F0FF]" />,
     profiles: [
       {
-        handle: "ivpankaj.online",
-        url: "https://ivpankaj.online",
-        ariaLabel: "Portfolio ivpankaj.online",
+        handle: "pankaj.life",
+        url: "https://pankaj.life",
+        ariaLabel: "Portfolio pankaj.life",
       },
     ],
   },
@@ -399,7 +399,7 @@ export function SocialHub() {
         <header className="fixed top-0 inset-x-0 z-50 flex items-center justify-between px-4 sm:px-10 py-3.5 sm:py-5 bg-gradient-to-b from-black/90 to-transparent backdrop-blur-sm pointer-events-auto">
           <div className="flex items-center gap-2">
             <span className="h-1.5 w-1.5 rounded-full bg-white animate-pulse" />
-      
+
           </div>
 
           <div className="flex items-center gap-2">
@@ -472,8 +472,8 @@ export function SocialHub() {
               >
                 <div
                   className={`transition-all duration-300 rounded-full ${isActive
-                      ? "h-4 w-1 bg-white shadow-[0_0_6px_rgba(255,255,255,0.7)]"
-                      : "h-1 w-1 bg-zinc-700 hover:bg-zinc-400"
+                    ? "h-4 w-1 bg-white shadow-[0_0_6px_rgba(255,255,255,0.7)]"
+                    : "h-1 w-1 bg-zinc-700 hover:bg-zinc-400"
                     }`}
                 />
               </button>
@@ -617,20 +617,19 @@ export function SocialHub() {
                       isCurrent ? { opacity: 1, y: 0 } : { opacity: 0, y: 18 }
                     }
                     transition={{ duration: 0.5, delay: 0.18, ease: [0.16, 1, 0.3, 1] }}
-                    className={`w-full max-w-full ${
-                      isSingle
+                    className={`w-full max-w-full ${isSingle
                         ? "flex justify-center"
                         : slide.profiles.length === 3
-                        ? "flex flex-col sm:grid sm:grid-cols-3 gap-2.5 sm:gap-3.5 max-w-md sm:max-w-3xl mx-auto"
-                        : "flex flex-col sm:grid sm:grid-cols-2 gap-2.5 sm:gap-3.5 max-w-md sm:max-w-xl mx-auto"
-                    }`}
+                          ? "flex flex-col sm:grid sm:grid-cols-3 gap-2.5 sm:gap-3.5 max-w-md sm:max-w-3xl mx-auto"
+                          : "flex flex-col sm:grid sm:grid-cols-2 gap-2.5 sm:gap-3.5 max-w-md sm:max-w-xl mx-auto"
+                      }`}
                   >
                     {slide.profiles.map((profile, pIdx) => (
                       <div
                         key={pIdx}
                         className={`group flex items-center justify-between px-4 py-3 sm:px-5 sm:py-3.5 rounded-xl sm:rounded-2xl bg-zinc-950/90 border border-zinc-800/90 hover:border-zinc-600 hover:bg-zinc-900/40 transition-all duration-300 shadow-xl ${isSingle
-                            ? "w-full max-w-[310px] sm:max-w-sm mx-auto"
-                            : "w-full max-w-[310px] sm:max-w-none mx-auto"
+                          ? "w-full max-w-[310px] sm:max-w-sm mx-auto"
+                          : "w-full max-w-[310px] sm:max-w-none mx-auto"
                           }`}
                       >
                         <div className="flex items-center min-w-0 pr-2">
@@ -686,8 +685,8 @@ export function SocialHub() {
                                 size="icon"
                                 asChild={!profile.isComingSoon}
                                 className={`h-8 w-8 sm:h-9 sm:w-9 rounded-xl transition-all ${profile.isComingSoon
-                                    ? "bg-zinc-900 text-zinc-400 border border-zinc-800 cursor-default"
-                                    : "bg-white text-black hover:bg-zinc-200 group-hover:scale-105 cursor-pointer"
+                                  ? "bg-zinc-900 text-zinc-400 border border-zinc-800 cursor-default"
+                                  : "bg-white text-black hover:bg-zinc-200 group-hover:scale-105 cursor-pointer"
                                   }`}
                               >
                                 {profile.isComingSoon ? (

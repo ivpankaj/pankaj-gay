@@ -1,7 +1,6 @@
 "use client";
 
 import React, { useState, useEffect, useRef } from "react";
-import Link from "next/link";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import {
@@ -20,7 +19,6 @@ import {
   ChevronDown,
   ChevronUp,
   Clock,
-  Sparkles,
 } from "lucide-react";
 import {
   GithubIcon,
@@ -397,58 +395,9 @@ export function SocialHub() {
     <TooltipProvider delayDuration={150}>
       <div className="relative w-full h-screen bg-black text-white overflow-hidden select-none font-sans">
         {/* Fixed Top Bar */}
-        <header className="fixed top-0 inset-x-0 z-50 flex items-center justify-between px-4 sm:px-10 py-3 sm:py-4 bg-gradient-to-b from-black/95 via-black/70 to-transparent backdrop-blur-md pointer-events-auto">
-          <div className="flex items-center gap-4 sm:gap-6">
-            <Link
-              href="/"
-              className="flex items-center gap-2 group cursor-pointer"
-              aria-label="Pankaj Verma Home"
-            >
-              <span className="h-2 w-2 rounded-full bg-emerald-500 animate-pulse" />
-              <span className="font-bold text-sm sm:text-base text-white tracking-tight group-hover:text-zinc-200 transition-colors">
-                Pankaj Verma
-              </span>
-              <span className="text-xs text-zinc-400 font-mono hidden sm:inline-block">
-                @ivpankaj
-              </span>
-            </Link>
-
-            {/* Quick Navigation Links */}
-            <nav aria-label="Header Navigation" className="hidden lg:flex items-center gap-1 font-mono text-xs text-zinc-400">
-              <Link
-                href="/about"
-                className="px-2.5 py-1 rounded-lg hover:text-white hover:bg-zinc-900/80 transition-colors"
-              >
-                About
-              </Link>
-              <Link
-                href="/projects"
-                className="px-2.5 py-1 rounded-lg hover:text-white hover:bg-zinc-900/80 transition-colors"
-              >
-                Projects
-              </Link>
-              <Link
-                href="/skills"
-                className="px-2.5 py-1 rounded-lg hover:text-white hover:bg-zinc-900/80 transition-colors"
-              >
-                Skills
-              </Link>
-              <Link
-                href="/blog"
-                className="px-2.5 py-1 rounded-lg hover:text-white hover:bg-zinc-900/80 transition-colors"
-              >
-                Blog
-              </Link>
-              <a
-                href="https://pankaj.life"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="px-2.5 py-1 rounded-lg hover:text-white hover:bg-zinc-900/80 transition-colors flex items-center gap-1 text-zinc-400"
-              >
-                <span>pankaj.life</span>
-                <ExternalLink className="h-3 w-3 opacity-60" />
-              </a>
-            </nav>
+        <header className="fixed top-0 inset-x-0 z-50 flex items-center justify-between px-4 sm:px-10 py-3.5 sm:py-5 bg-gradient-to-b from-black/90 to-transparent backdrop-blur-sm pointer-events-auto">
+          <div className="flex items-center gap-2">
+            <span className="h-1.5 w-1.5 rounded-full bg-white animate-pulse" />
           </div>
 
           <div className="flex items-center gap-2">
@@ -575,102 +524,37 @@ export function SocialHub() {
             const isCurrent = idx === activeIndex;
             const isSingle = slide.profiles.length === 1;
 
-            // FIRST FACE: Pankaj Verma Official Identity Hero
+            // FIRST FACE: Write only WELCOME
             if (slide.isWelcome) {
               return (
                 <section
                   key={slide.id}
-                  className="w-full h-screen snap-start snap-always flex flex-col justify-center items-center relative px-4 sm:px-8 md:px-12 pt-16 pb-16 overflow-hidden"
+                  className="w-full h-screen snap-start snap-always flex flex-col justify-center items-center relative px-4 sm:px-8 md:px-12 pt-14 pb-14 overflow-hidden"
                 >
-                  <div className="w-full max-w-4xl 2xl:max-w-5xl flex flex-col items-center text-center my-auto px-2 sm:px-4 space-y-4 sm:space-y-6">
-                    {/* Verified Identity Badge */}
-                    <motion.div
-                      initial={{ opacity: 0, y: 15 }}
-                      animate={isCurrent ? { opacity: 1, y: 0 } : { opacity: 0, y: 15 }}
-                      transition={{ duration: 0.5 }}
-                      className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-zinc-950/90 border border-zinc-800 text-xs font-mono text-zinc-300 shadow-xl"
-                    >
-                      <span className="h-1.5 w-1.5 rounded-full bg-emerald-500 animate-pulse" />
-                      <span>Official Digital Hub • Noida / Delhi NCR</span>
-                    </motion.div>
-
-                    {/* H1 Heading: Pankaj Verma */}
-                    <div className="w-full flex justify-center items-center px-2">
-                      <motion.h1
-                        initial={{ opacity: 0, scale: 0.94, y: 20 }}
-                        animate={isCurrent ? { opacity: 1, scale: 1, y: 0 } : { opacity: 0, scale: 0.94, y: 20 }}
-                        transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
-                        className="font-display font-black tracking-tight uppercase text-white leading-none select-none text-center text-[clamp(2.75rem,8vw,6.5rem)] sm:text-[clamp(3.75rem,9vw,8rem)]"
+                  <div className="w-full max-w-6xl 2xl:max-w-7xl flex flex-col items-center text-center my-auto -translate-y-12 sm:translate-y-0 px-2 sm:px-4">
+                    <div className="w-full max-w-full flex justify-center items-center px-2">
+                      <motion.div
+                        role="heading"
+                        aria-level={2}
+                        initial={{ opacity: 0, scale: 0.9, y: 20 }}
+                        animate={isCurrent ? { opacity: 1, scale: 1, y: 0 } : { opacity: 0, scale: 0.9, y: 20 }}
+                        transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
+                        className={`font-display font-black tracking-tight uppercase text-white leading-none select-none text-center whitespace-nowrap ${getHeadingSize(
+                          "WELCOME"
+                        )}`}
                       >
-                        Pankaj Verma
-                      </motion.h1>
+                        WELCOME
+                      </motion.div>
                     </div>
 
-                    {/* Subtitle with @ivpankaj */}
-                    <motion.div
-                      initial={{ opacity: 0, y: 15 }}
-                      animate={isCurrent ? { opacity: 1, y: 0 } : { opacity: 0, y: 15 }}
-                      transition={{ duration: 0.6, delay: 0.15 }}
-                      className="space-y-2 max-w-2xl"
-                    >
-                      <p className="text-base sm:text-xl font-semibold text-zinc-200 tracking-tight">
-                        Software Developer &amp; Full-Stack Engineer • Known online as{" "}
-                        <span className="text-white font-mono bg-zinc-900 px-2 py-0.5 rounded-md border border-zinc-800">
-                          @ivpankaj
-                        </span>
-                      </p>
-                      <p className="text-xs sm:text-sm text-zinc-400 leading-relaxed max-w-xl mx-auto font-normal">
-                        I&apos;m Pankaj Verma, known online as ivpankaj. I build modern web applications,
-                        scalable APIs, and open-source software using TypeScript, React, Next.js, and Node.js.
-                        Explore my projects, skills, articles, and verified profiles below.
-                      </p>
-                    </motion.div>
-
-                    {/* Quick navigation pill links */}
-                    <motion.div
-                      initial={{ opacity: 0, y: 15 }}
-                      animate={isCurrent ? { opacity: 1, y: 0 } : { opacity: 0, y: 15 }}
-                      transition={{ duration: 0.6, delay: 0.25 }}
-                      className="flex flex-wrap items-center justify-center gap-2 pt-2"
-                    >
-                      <Link
-                        href="/about"
-                        className="px-4 py-2 rounded-xl bg-zinc-900 border border-zinc-800 text-xs sm:text-sm font-medium text-zinc-200 hover:text-white hover:border-zinc-700 hover:bg-zinc-800 transition-all"
-                      >
-                        About Biography
-                      </Link>
-                      <Link
-                        href="/projects"
-                        className="px-4 py-2 rounded-xl bg-zinc-900 border border-zinc-800 text-xs sm:text-sm font-medium text-zinc-200 hover:text-white hover:border-zinc-700 hover:bg-zinc-800 transition-all"
-                      >
-                        Software Projects
-                      </Link>
-                      <Link
-                        href="/skills"
-                        className="px-4 py-2 rounded-xl bg-zinc-900 border border-zinc-800 text-xs sm:text-sm font-medium text-zinc-200 hover:text-white hover:border-zinc-700 hover:bg-zinc-800 transition-all"
-                      >
-                        Technical Stack
-                      </Link>
-                      <Link
-                        href="/blog"
-                        className="px-4 py-2 rounded-xl bg-zinc-900 border border-zinc-800 text-xs sm:text-sm font-medium text-zinc-200 hover:text-white hover:border-zinc-700 hover:bg-zinc-800 transition-all"
-                      >
-                        Engineering Articles
-                      </Link>
-                    </motion.div>
-
-                    {/* Scroll to Profiles prompt */}
                     <motion.div
                       initial={{ opacity: 0 }}
                       animate={isCurrent ? { opacity: 1 } : { opacity: 0 }}
-                      transition={{ duration: 0.8, delay: 0.35 }}
+                      transition={{ duration: 0.8, delay: 0.3 }}
                       onClick={() => scrollToSlide(1)}
-                      className="flex flex-col items-center gap-1.5 pt-4 text-zinc-500 hover:text-white transition-colors cursor-pointer group"
+                      className="flex flex-col items-center gap-2 mt-8 text-zinc-500 hover:text-white transition-colors cursor-pointer"
                     >
-                      <span className="text-[11px] font-mono tracking-wider uppercase text-zinc-500 group-hover:text-zinc-300">
-                        Explore Verified Profile Directory
-                      </span>
-                      <ChevronDown className="h-4 w-4 animate-bounce" />
+                      <ChevronDown className="h-5 w-5 animate-bounce" />
                     </motion.div>
                   </div>
                 </section>

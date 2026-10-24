@@ -20,6 +20,10 @@ export default function Home() {
           "ivpankaj.dev",
           "ivpankaj online",
           "ivpankaj developer",
+          "pankaj.gay",
+          "www.pankaj.gay",
+          "https://www.pankaj.gay",
+          "https://pankaj.gay",
         ],
         "identifier": "ivpankaj",
         "url": `${siteConfig.url}/`,
@@ -78,6 +82,9 @@ export default function Home() {
           "Pankaj Verma — Official Website",
           "ivpankaj — Official Website",
           "pankaj.gay",
+          "www.pankaj.gay",
+          "https://www.pankaj.gay",
+          "https://pankaj.gay",
         ],
         "description":
           "The official website and digital hub of Pankaj Verma (ivpankaj), software developer and tech person in Noida, Greater Noida, and Delhi NCR.",
@@ -142,56 +149,7 @@ export default function Home() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
       />
 
-      {/* Crawlable Semantic SEO Foundation for Googlebot and Search Indexing (Visually Hidden) */}
-      <header className="sr-only">
-        <h1>Pankaj Verma (ivpankaj) — Software Developer in Noida, Greater Noida & Delhi NCR</h1>
-        <p>
-          Welcome to the official personal website of <strong>Pankaj Verma</strong>, known online as
-          <strong>ivpankaj</strong> or <strong>Pankaj</strong>. Pankaj Verma is an accomplished
-          <strong>software developer</strong> and <strong>software and tech person</strong> based in
-          <strong>Noida</strong>, <strong>Greater Noida</strong>, <strong>Delhi</strong>, and the
-          <strong>Delhi NCR</strong> region.
-        </p>
-        <section>
-          <h2>About Pankaj Verma (ivpankaj) — Software Developer & Tech Person</h2>
-          <p>
-            Looking for <strong>Pankaj</strong>, <strong>Pankaj Verma</strong>, <strong>ivpankaj</strong>,
-            or a skilled <strong>Software Developer at Noida / Greater Noida / Delhi / Delhi NCR</strong>?
-            Pankaj Verma is a dedicated software engineer specializing in modern web technologies,
-            cloud architecture, and open-source software. This website (pankaj.gay) serves as his
-            verified primary hub, linking to his GitHub, LinkedIn, X (Twitter), Instagram, and
-            developer portfolio.
-          </p>
-          <ul>
-            <li><strong>Full Name:</strong> Pankaj Verma (Pankaj)</li>
-            <li><strong>Online Moniker:</strong> ivpankaj (@ivpankaj)</li>
-            <li><strong>Role:</strong> Software Developer, Software and Tech Person</li>
-            <li><strong>Location:</strong> Noida, Greater Noida, Delhi, Delhi NCR, India</li>
-            <li><strong>Official Domain:</strong> https://pankaj.gay</li>
-            <li><strong>Developer Portfolio:</strong> https://pankaj.life</li>
-          </ul>
-        </section>
-      </header>
-
-      {/* Crawlable Semantic Anchor Links with rel="me" for Bi-Directional Identity Verification (Visually Hidden) */}
-      <nav aria-label="Official Social Profiles Directory for Pankaj Verma (ivpankaj)" className="sr-only">
-        <h2>Official Verified Social Media & Developer Channels for Pankaj Verma (ivpankaj)</h2>
-        <ul>
-          {Object.entries(siteConfig.socials).map(([key, social]) => (
-            <li key={key}>
-              <a
-                href={social.url}
-                rel="me noopener noreferrer"
-                target="_blank"
-              >
-                Pankaj Verma (ivpankaj) on {social.name} ({social.handle})
-              </a>
-            </li>
-          ))}
-        </ul>
-      </nav>
-
-      {/* User-Facing UI (Visually Unchanged) */}
+      {/* Visible Fullscreen Interactive Hub & Navigation */}
       <SocialHub />
     </main>
   );

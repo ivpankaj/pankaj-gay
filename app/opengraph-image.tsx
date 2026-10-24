@@ -112,7 +112,7 @@ export default function OpenGraphImage() {
             fontWeight: 500,
           }}
         >
-          pankaj.gay
+          www.pankaj.gay
         </div>
       </div>
     ),

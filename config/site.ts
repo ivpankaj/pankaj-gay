@@ -11,6 +11,7 @@ export interface SiteConfig {
   author: string;
   alternateName: string;
   url: string;
+  alternateUrl: string;
   title: string;
   description: string;
   locale: string;
@@ -27,7 +28,8 @@ export const siteConfig: SiteConfig = {
   name: "Pankaj Verma",
   author: "Pankaj Verma",
   alternateName: "ivpankaj",
-  url: "https://pankaj.gay",
+  url: "https://www.pankaj.gay",
+  alternateUrl: "https://pankaj.gay",
   title: "Pankaj Verma (ivpankaj) — Software Developer in Noida & Delhi NCR",
   description:
     "Official website of Pankaj Verma (ivpankaj) — Software developer and tech person in Noida, Greater Noida, and Delhi NCR. Verified profiles on GitHub, X, LinkedIn, and portfolio.",
@@ -163,6 +165,8 @@ export const siteConfig: SiteConfig = {
     "https://facebook.com/ivpankaj",
     "https://snapchat.com/add/ivpank",
     "https://pankaj.life",
+    "https://www.pankaj.gay",
+    "https://pankaj.gay",
   ],
   verification: {
     google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION || "",

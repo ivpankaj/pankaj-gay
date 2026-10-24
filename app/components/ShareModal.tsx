@@ -30,7 +30,7 @@ interface ShareModalProps {
 export function ShareModal({
   isOpen,
   onClose,
-  url = "https://pankaj.gay",
+  url = "https://www.pankaj.gay",
 }: ShareModalProps) {
   const [copied, setCopied] = useState(false);
   const [qrDataUrl, setQrDataUrl] = useState<string>("");
@@ -115,7 +115,7 @@ export function ShareModal({
             {qrDataUrl ? (
               <img
                 src={qrDataUrl}
-                alt="QR Code for https://pankaj.gay"
+                alt={`QR Code for ${url}`}
                 className="w-44 h-44 rounded-xl block object-contain"
               />
             ) : (

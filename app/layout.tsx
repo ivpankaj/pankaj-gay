@@ -1,6 +1,21 @@
 import type { Metadata, Viewport } from "next";
+import { Space_Grotesk, Syne } from "next/font/google";
 import { siteConfig } from "@/config/site";
 import "./globals.css";
+
+const spaceGrotesk = Space_Grotesk({
+  subsets: ["latin"],
+  variable: "--font-sans",
+  display: "swap",
+  weight: ["400", "500", "600", "700"],
+});
+
+const syne = Syne({
+  subsets: ["latin"],
+  variable: "--font-display",
+  display: "swap",
+  weight: ["700", "800"],
+});
 
 export const viewport: Viewport = {
   themeColor: siteConfig.themeColor,
@@ -14,13 +29,13 @@ export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
   title: {
     default:
-      "Pankaj Verma (ivpankaj) — Software Developer in Noida & Delhi NCR | Official Website",
+      "Pankaj Verma (ivpankaj) — Software Developer & Technology Portfolio",
     template: `%s | Pankaj Verma (ivpankaj)`,
   },
   description:
-    "Official website of Pankaj Verma (ivpankaj) — Software developer and tech person based in Noida, Greater Noida, Delhi, and Delhi NCR. Explore verified profiles on GitHub, X, LinkedIn, and developer portfolio.",
+    "Official website of Pankaj Verma (known online as ivpankaj) — Software developer and full-stack engineer in Noida, Greater Noida, and Delhi NCR, India. Explore verified projects, technical skills, engineering articles, and official profiles.",
   applicationName: "Pankaj Verma (ivpankaj)",
-  authors: [{ name: "Pankaj Verma (ivpankaj)", url: siteConfig.url }],
+  authors: [{ name: "Pankaj Verma", url: siteConfig.url }],
   creator: "Pankaj Verma (ivpankaj)",
   publisher: "Pankaj Verma",
   formatDetection: {
@@ -29,36 +44,77 @@ export const metadata: Metadata = {
     telephone: false,
   },
   keywords: [
-    "Pankaj",
+    // Tier 1 — Primary personal identity
     "Pankaj Verma",
+    "Pankaj Verma portfolio",
+    "Pankaj Verma developer",
+    "Pankaj Verma personal website",
+    "Pankaj Verma official website",
+    "Pankaj Verma projects",
+    "Pankaj Verma GitHub",
+    "Pankaj Verma technology",
+
+    // Tier 2 — First-name identity
+    "Pankaj",
+    "Pankaj developer",
+    "Pankaj software developer",
+    "Pankaj portfolio",
+    "Pankaj technology",
+    "Pankaj projects",
+    "Pankaj coding",
+    "Pankaj programmer",
+
+    // Tier 3 — Global username
     "ivpankaj",
-    "@ivpankaj",
-    "software and tech person",
-    "tech person",
-    "software developer",
-    "Software Developer at Noida",
-    "Software Developer in Noida",
-    "Software Developer Greater Noida",
-    "Software Developer in Greater Noida",
-    "Software Developer Delhi",
-    "Software Developer in Delhi",
-    "Software Developer Delhi NCR",
-    "Software Developer in Delhi NCR",
-    "Pankaj Verma Noida",
-    "Pankaj Verma Greater Noida",
-    "Pankaj Verma Delhi NCR",
-    "Pankaj Verma Software Developer",
-    "ivpankaj software developer",
-    "ivpankaj Noida",
-    "ivpankaj Delhi",
-    "ivpankaj Delhi NCR",
-    "ivpankaj official website",
-    "ivpankaj github",
-    "ivpankaj twitter",
-    "ivpankaj linkedin",
-    "ivpankaj instagram",
-    "ivpankaj online",
+    "ivpankaj portfolio",
+    "ivpankaj developer",
+    "ivpankaj GitHub",
+    "ivpankaj projects",
+    "ivpankaj technology",
+    "ivpankaj website",
+
+    // Tier 4 — Full name plus technology
+    "Pankaj Verma software developer",
+    "Pankaj Verma web developer",
+    "Pankaj Verma full-stack developer",
+    "Pankaj Verma Next.js developer",
+    "Pankaj Verma React developer",
+    "Pankaj Verma JavaScript developer",
+    "Pankaj Verma TypeScript developer",
+    "Pankaj Verma Node.js developer",
+    "Pankaj Verma software engineer",
+    "Pankaj Verma developer portfolio",
+    "Pankaj Verma GitHub projects",
+
+    // Tier 5 — Username plus technology
+    "ivpankaj developer",
+    "ivpankaj Next.js",
+    "ivpankaj React",
+    "ivpankaj JavaScript",
+    "ivpankaj TypeScript",
+    "ivpankaj Node.js",
+    "ivpankaj full-stack developer",
+    "ivpankaj software engineer",
+    "ivpankaj GitHub projects",
+    "ivpankaj web development",
+
+    // Tier 6 — Professional discovery & location
+    "Developer portfolio",
+    "Full-stack developer portfolio",
+    "Next.js developer portfolio",
+    "Software engineering projects",
+    "Web application development",
+    "Open-source projects",
+    "Technical blog",
+    "Software development case studies",
+    "Software developer in Noida",
+    "Software developer in Greater Noida",
+    "Software developer in Delhi NCR",
     "pankaj.gay",
+    "www.pankaj.gay",
+    "https://www.pankaj.gay",
+    "https://pankaj.gay",
+    "pankaj.life",
   ],
   alternates: {
     canonical: "/",
@@ -68,17 +124,17 @@ export const metadata: Metadata = {
     locale: siteConfig.locale,
     url: siteConfig.url,
     title:
-      "Pankaj Verma (ivpankaj) — Software Developer in Noida & Delhi NCR",
+      "Pankaj Verma (ivpankaj) — Software Developer & Technology Portfolio",
     description:
-      "Official website of Pankaj Verma (ivpankaj) — Software developer and tech person based in Noida, Greater Noida, and Delhi NCR.",
+      "Official website of Pankaj Verma (ivpankaj) — Software developer and full-stack engineer in Noida, Greater Noida, and Delhi NCR. Verified projects and profiles.",
     siteName: "Pankaj Verma (ivpankaj)",
   },
   twitter: {
     card: "summary_large_image",
     title:
-      "Pankaj Verma (ivpankaj) — Software Developer in Noida & Delhi NCR",
+      "Pankaj Verma (ivpankaj) — Software Developer & Technology Portfolio",
     description:
-      "Software developer and tech person in Noida, Greater Noida, Delhi NCR. Verified profiles for Pankaj Verma (ivpankaj).",
+      "Software developer in Noida & Delhi NCR. Verified projects, technical stack, and official directory for Pankaj Verma (ivpankaj).",
     creator: "@ivpankaj",
     site: "@ivpankaj",
   },
@@ -109,7 +165,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html
+      lang="en"
+      className={`${spaceGrotesk.variable} ${syne.variable} font-sans`}
+    >
       <head>
         {/* Google tag (gtag.js) */}
         <script
@@ -126,16 +185,6 @@ export default function RootLayout({
   gtag('config', 'G-61YH1S6XCW');
 `,
           }}
-        />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link
-          rel="preconnect"
-          href="https://fonts.gstatic.com"
-          crossOrigin="anonymous"
-        />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Syne:wght@700;800;900&display=swap"
-          rel="stylesheet"
         />
       </head>
       <body className="bg-black text-white font-sans antialiased">

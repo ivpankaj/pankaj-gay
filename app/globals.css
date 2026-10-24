@@ -1,5 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Syne:wght@700;800;900&display=swap");
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -26,8 +24,6 @@
     --input: 0 0% 14%;
     --ring: 0 0% 100%;
     --radius: 1rem;
-    --font-display: "Syne", sans-serif;
-    --font-sans: "Space Grotesk", sans-serif;
   }
 }
 
@@ -43,22 +39,4 @@ body {
   margin: 0;
   padding: 0;
   -webkit-font-smoothing: antialiased;
-  font-family: var(--font-sans), sans-serif;
-}
-
-.font-display {
-  font-family: var(--font-display), sans-serif;
-}
-
-/* Accessibility & SEO utility */
-.sr-only {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  white-space: nowrap;
-  border: 0;
 }
